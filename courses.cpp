@@ -76,7 +76,7 @@ class CourseSchedule{
     }
 
     bool isValidGrade(const string& g) {
-        vector<string> validGrades = {"A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D", "F"};
+        vector<string> validGrades = {"A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+","D","D-", "F"};
 
         for (string grade : validGrades) {
             if (g == grade) {
