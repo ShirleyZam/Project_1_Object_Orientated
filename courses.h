@@ -52,14 +52,15 @@ class CourseSchedule{
             cout << "Course " << i + 1 << ": ";
             getline(cin,course);
             courses.push_back(course);
-    }
+         }
+    }   
 
-    void GetCreditHours(int N) {
+    void GetCreditHours(int N){
         cout << "How many credits is each course \n";
     
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++){
             int hours;
-            while (true) { 
+            while (true){ 
                 cout << "Credit hours for " << courses[i] << ": ";
                 cin >> hours;
 
@@ -105,14 +106,7 @@ class CourseSchedule{
                     cerr << "Ivalid grade.\n";
                     }
                 } while(true);
-        }
+            }
     }
 
-
 };
-
-
-
-
-
-
