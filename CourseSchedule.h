@@ -32,11 +32,12 @@ class CourseSchedule{
     void GetCourses(int &N){
         cout << "How many courses do you have? \n"; 
         cin >> N;
-        
+        cin.ignore();
 
         if (cin.fail()){
-            cerr << "Invalid. Please enter a integer \n";
             cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(),'\n');
+            cerr << "Invalid. Please enter a integer \n";
             return;
         } 
         
@@ -50,7 +51,6 @@ class CourseSchedule{
             string course; 
             cout << "Course " << i + 1 << ": ";
             getline(cin,course);
-            cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
             courses.push_back(course);
     }
 };
@@ -65,8 +65,9 @@ class CourseSchedule{
                 cin >> hours;
 
                 if (cin.fail() || hours <= 0) {
-                    cerr << "Invalid input. Hours must be a positive number.\n";
                     cin.clear(); // clear failbit
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+                    cerr << "Invalid input. Hours must be a positive number.\n";
                 } else {
                     creditHours.push_back(hours);
                     break; 
@@ -110,4 +111,8 @@ class CourseSchedule{
 
 
 };
+
+
+};
+
 
