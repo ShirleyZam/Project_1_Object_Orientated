@@ -8,28 +8,28 @@ using namespace std;
 
 
 
-class CourseSchedule{
+class Course{
     private: 
     vector<string>courses;
     vector<int>creditHours; 
     vector<string>letterGrade;
 
     public:
-    ~CourseSchedule(){
+    ~Course(){
 
     }
 
-    CourseSchedule(){
+    Course(){
 
     }
 
-    CourseSchedule(vector<string>Courses,vector<int>CreditHours,vector<string>LetterGrade){
+    Course(vector<string>Courses,vector<int>CreditHours,vector<string>LetterGrade){
         courses = Courses;
         creditHours = CreditHours;
         letterGrade = LetterGrade;
     }
 
-    void GetCourses(int &N){
+    void getCourses(int &N){
         cout << "How many courses do you have? \n"; 
         cin >> N;
         cin.ignore();
@@ -55,7 +55,7 @@ class CourseSchedule{
          }
     }   
 
-    void GetCreditHours(int N){
+    void getCreditHours(int N){
         cout << "How many credits is each course \n";
     
         for (int i = 0; i < N; i++){
@@ -89,7 +89,7 @@ class CourseSchedule{
     }
 
 
-    void GetLetterGrade(int N) {
+    void getLetterGrade(int N) {
         cout << "What letter grade did you get for each course? "<< endl;
     
         for(int i = 0; i < N; i++){
@@ -110,3 +110,4 @@ class CourseSchedule{
     }
 
 };
+
