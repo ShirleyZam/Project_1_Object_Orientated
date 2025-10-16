@@ -9,7 +9,7 @@ class Student {
     //students data which is why its private
     private:  
     string fullName{"First Last"};
-    vector<course> courses; // Fixed: should be courseNames, not courseName
+    vector<Course> courses; 
 
     public:
     Student(){}
@@ -18,27 +18,26 @@ class Student {
     Student (string name) {
         fullName = name;
     }
-    //Creates a student and sets their name 
+    
+    string getName() const {
+        return fullName;
+    }
+
+    vector<Course> getCourses() const {
+        return courses;
+    }
 
     Student(const Student& other){
         fullName = other.fullName;
         courses = other.courses;
     }
-    //creates a new student as a copy of another student data
+    
 
     void addCourse(const Course& course){
         courses.push_back(course);
     }
     //Adds a course name to the students list of courses
 
-    void printInfo() const{
-        cout << "Courses: ";
-        for (const Course& course : courses) {
-            cout << course.getName() << " ";
-        }
-        cout << endl;
-    }
-    //Prints the students name and list of courses they are enrolled in
 
     double getGradePoint(const string& grade) const {
         if (grade == "A") return 4.0;
@@ -70,7 +69,6 @@ class Student {
         if (totalCredits == 0) return 0.0; // Avoid division by zero
         return totalPoints / totalCredits;
     }
-
 
 
 };
