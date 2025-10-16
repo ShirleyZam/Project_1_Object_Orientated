@@ -53,7 +53,6 @@ class CourseSchedule{
             getline(cin,course);
             courses.push_back(course);
     }
-};
 
     void GetCreditHours(int N) {
         cout << "How many credits is each course \n";
@@ -113,6 +112,7 @@ class CourseSchedule{
 };
 
 
-};
+
+
 
 
