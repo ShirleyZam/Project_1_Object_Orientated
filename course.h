@@ -1,3 +1,6 @@
+//Shirley Zamora
+//October, 17, 2025
+
 #include <iostream> 
 #include <string>
 
@@ -18,7 +21,7 @@ public:
 }
 
 
-    // Getters
+    // Getters: Encapsulation in order to safely use the attributes(private) for the methods
     string getName() const {
         return name;
     }
@@ -31,3 +34,5 @@ public:
         return letterGrade;
     }
 };
+
+
