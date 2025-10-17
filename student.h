@@ -1,7 +1,7 @@
 // Lucia Zuniga
 // 10-17-2025
 
-#include "courses.h"
+#include "course.h"
 #include <iostream>
 #include <string>
 #include <vector>
