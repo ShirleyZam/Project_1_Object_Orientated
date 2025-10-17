@@ -34,10 +34,11 @@ public:
         return letterGrade;
     }
 };
+
 // Some challenges I faced when creating this file was communicating with my group members and making sure that my file is able to function as a 
 //storage for student.h this is to make sure that the input that the user inputs is able to be stored and called on later without 
 //any missing information (const). 
 
-// I learned to communicate better with fellow classmates as well as a better understanding for encapsulating private data for the program
-//not to crash. 
-
+// I learned to communicate better with fellow classmates and organize the program in a way that makes sense, we helped eachother understand 
+//each of our duties and helped eachother with certain aspects of our files in order to generate the output we wanted. There were 
+//challenges with our schedules not always aligning but throguh
