@@ -30,3 +30,20 @@ public:
 };
 
 #endif
+
+
+option #2
+class Course {
+private:
+    string name;
+    int creditHours;
+    string letterGrade;
+
+public:
+    Course(string n, int ch, string lg) : name(n), creditHours(ch), letterGrade(lg) {}
+
+    string getName() const { return name; }
+    int getCreditHours() const { return creditHours; }
+    string getLetterGrade() const { return letterGrade; }
+};
+
