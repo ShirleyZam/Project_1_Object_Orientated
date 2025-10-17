@@ -1,3 +1,6 @@
+// Lucia Zuniga
+// 10-17-2025
+
 #include "courses.h"
 #include <iostream>
 #include <string>
@@ -69,6 +72,11 @@ class Student {
         if (totalCredits == 0) return 0.0; // Avoid division by zero
         return totalPoints / totalCredits;
     }
-
-
 };
+
+
+//Reflection:
+// Challenges:
+
+
+// What I learned:
