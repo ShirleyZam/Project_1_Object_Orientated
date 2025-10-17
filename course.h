@@ -34,8 +34,7 @@ public:
         return letterGrade;
     }
 };
-// Challenges:
-
+// Some challenges I faced when creating 
 
 // What I learned:
 
