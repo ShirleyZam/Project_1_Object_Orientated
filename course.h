@@ -37,8 +37,10 @@ public:
 
 // Some challenges I faced when creating this file was communicating with my group members and making sure that my file is able to function as a 
 //storage for student.h this is to make sure that the input that the user inputs is able to be stored and called on later without 
-//any missing information (const). 
+//any missing information (constant with the name, credits and grade). 
 
 // I learned to communicate better with fellow classmates and organize the program in a way that makes sense, we helped eachother understand 
 //each of our duties and helped eachother with certain aspects of our files in order to generate the output we wanted. There were 
-//challenges with our schedules not always aligning but throguh
+//challenges with our schedules not always aligning but we managed to figure out what days to collaborate and share our ideas. I also learned more 
+//about when it's necessary to practice encapsulation (private data) and how methods are able to access the private data without the risk of 
+//changing the data (protection).
