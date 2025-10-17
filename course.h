@@ -23,7 +23,7 @@ public:
 
     // Getters: Encapsulation in order to safely use the attributes(private) for the methods
     string getName() const {
-        return name;
+        return name; //returns the private attributes safely without risking the program crashing
     }
 
     int getCreditHours() const {
@@ -34,7 +34,10 @@ public:
         return letterGrade;
     }
 };
-// Some challenges I faced when creating 
+// Some challenges I faced when creating this file was communicating with my group members and making sure that my file is able to function as a 
+//storage for student.h this is to make sure that the input that the user inputs is able to be stored and called on later without 
+//any missing information (const). 
 
-// What I learned:
+// I learned to communicate better with fellow classmates as well as a better understanding for encapsulating private data for the program
+//not to crash. 
 
