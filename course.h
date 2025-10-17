@@ -1,0 +1,27 @@
+#include <string>
+using namespace std;
+
+class Course {
+private:
+    string name;
+    int creditHours;
+    string letterGrade;
+
+public:
+    // Constructor
+    Course(string courseName, int credits, string grade)
+        : name(courseName), creditHours(credits), letterGrade(grade) {}
+
+    // Getters
+    string getName() const {
+        return name;
+    }
+
+    int getCreditHours() const {
+        return creditHours;
+    }
+
+    string getLetterGrade() const {
+        return letterGrade;
+    }
+};
