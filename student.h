@@ -75,8 +75,17 @@ class Student {
 };
 
 
-//Reflection:
+// Reflection -
 // Challenges:
-
+// One of the biggest challenges I faced during the project was working with loops especially choosing the right type of loop and 
+// making sure I included all the necessary information for the student class to ensure its does the proper job. 
+// I also had to be careful that my code didn’t interfere with other files in the project 
+// meaning that I had to have a lot of communication with my group was really important to avoid clashes or confusion.
 
 // What I learned:
+// I got a lot more comfortable using loops and understanding how they work in different situations. 
+//Also because I feel like its been a while since I last used loops.
+//I also learned how important it is to include the right components in a class like constructors 
+//so everything interconnects properly. 
+//This project gave me a chance to practice  clean organization,  consistent code and the thought process about 
+//how each part fits into the bigger task efficiently.
