@@ -59,3 +59,118 @@ int main() {
 
     return 0;
 }
+
+//option 2:
+
+#include <iostream>
+#include <string>
+#include "student.h"
+
+using namespace std;
+
+// Helper: Get a valid number of courses (1–10)
+int getCourseCount() {
+    int count;
+    cout << "How many courses did the student take (1–10)? ";
+    cin >> count;
+    cin.ignore();
+
+    while (cin.fail() || count < 1 || count > 10) {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid input. Enter a number between 1 and 10: ";
+        cin >> count;
+        cin.ignore();
+    }
+    return count;
+}
+
+// Helper: Get valid credit hours (≥ 0)
+int getCreditHours(const string& courseName) {
+    int hours;
+    cout << "Credit hours for " << courseName << ": ";
+    cin >> hours;
+    cin.ignore();
+
+    while (cin.fail() || hours < 0) {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid input. Enter a non-negative number: ";
+        cin >> hours;
+        cin.ignore();
+    }
+    return hours;
+}
+
+// Helper: Get a valid letter grade
+string getLetterGrade(const string& courseName, const Student& student) {
+    string grade;
+    cout << "Letter grade for " << courseName << ": ";
+    cin >> grade;
+    cin.ignore();
+
+    while (student.getGradePoint(grade) < 0) {
+        cout << "Invalid grade. Try again (A, A-, B+, ..., F): ";
+        cin >> grade;
+        cin.ignore();
+    }
+    return grade;
+}
+
+int main() {
+    string name;
+    cout << "Enter student's full name: ";
+    getline(cin, name);
+
+    Student student(name);
+    int numCourses = getCourseCount();
+
+    for (int i = 0; i < numCourses; ++i) {
+        cout << "\nCourse " << i + 1 << ":\n";
+        string courseName;
+        cout << "Course name: ";
+        getline(cin, courseName);
+
+        int credits = getCreditHours(courseName);
+        string grade = getLetterGrade(courseName, student);
+
+        student.addCourse(Course(courseName, credits, grade));
+    }
+
+    // Print transcript
+    cout << "\n================ Student Grade Report ================\n";
+    cout << "Student: " << student.getName() << "\n\n";
+    cout << "Course        Credits   GradePts   TotalPts\n";
+    cout << "------------------------------------------\n";
+
+    double totalPoints = 0;
+    int totalCredits = 0;
+
+    for (const Course& c : student.getCourses()) {
+        double gp = student.getGradePoint(c.getLetterGrade());
+        double tp = gp * c.getCreditHours();
+
+        cout << c.getName() << "     "
+             << c.getCreditHours() << "         "
+             << gp << "       "
+             << tp << "\n";
+
+        totalPoints += tp;
+        totalCredits += c.getCreditHours();
+    }
+
+    double gpa = student.calculateGPA();
+    cout << "\nTotal Credits:          " << totalCredits << "\n";
+    cout << "Total Points:           " << totalPoints << "\n";
+    cout << "Semester GPA:           " << gpa << "\n";
+
+    if (gpa >= 3.7)
+        cout << "Standing:               Dean's List\n";
+    else if (gpa >= 2.0)
+        cout << "Standing:               Good Standing\n";
+    else
+        cout << "Standing:               Probation\n";
+
+    return 0;
+}
+
