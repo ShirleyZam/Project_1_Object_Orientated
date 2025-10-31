@@ -1,20 +1,18 @@
-#include BankingSystem.cpp
-#include<iostream>
+#include BankingAccount.h
 #include<string>
-#include <sstream>
 #include<vector>
-#include<iomanip>
+
 
 using namespace std;
 
-    class BankAccout{
-        Private:
+    class BankAccount{
+        private:
             string ownerName{"First Last"};
             int accountNumber{};
             double balance{0.0};
             vector<string> history;
 
-            Public:
+            public:
             BankAccount() {}
                 BankAccount(const string& ownerName, int accountNumber, double balance);
                 
