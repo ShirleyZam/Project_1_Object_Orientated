@@ -17,10 +17,10 @@ using namespace std;
 
             public:
 //Lucia: Defined public data so Bankingsystems file can have access to following data
-            BankAccount() {}
+            bankAccount() {}
 //Lucia: Default constructor
 
-                 BankAccount(const string& OwnerName, int AccountNumber, double Balance){
+                 bankAccount(const string& OwnerName, int AccountNumber, double Balance){
                     //Shirley : Encapsulation using the parametized constructor to access the private Data Members
                     ownerName = OwnerName;
                     accountNumber = AccountNumber;
