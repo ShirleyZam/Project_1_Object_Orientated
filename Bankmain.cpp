@@ -1,4 +1,4 @@
-// Author: Rejuana Afrin
+// Name: Rejuana Afrin
 // Date: 11/01/2025
 
 #include <iostream>
