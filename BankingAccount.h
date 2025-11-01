@@ -7,31 +7,41 @@ using namespace std;
 
     class BankAccount{
         private:
-            string ownerName{"First Last"};
+//HWe have the private member variables for the data of account
+            string ownerName{"First Last"}; 
             int accountNumber{};
             double balance{0.0};
-            vector<string> history; //Person 2: Manage this with vector
+            vector<string> history; //Shirley will manage this with vector
 
             public:
+//Public data so Bankingsystems file can have access to following data
             BankAccount() {}
+//Default constructor
 
-             // Person 2: Add push_back to history to log account creation
+             // Shirley: Add push_back to history to log account creation
                 BankAccount(const string& ownerName, int accountNumber, double balance);
-                
+//Parameterized constructor
+
+                //Functions: 
+                    //Deposit function
+                    
                 void deposit(double amount){
+                    //Add balance when a number is provided
                    balance += amount;
 
-                   //console output for testing (person 1)
+                
                    cout<< "Deposited $" << amount << endl;
                    // Person 2: Add input validation (amount > 0)
-        // Person 2: Add push_back to history for successful or failed deposit
+        // Shirley Add push_back to history for successful or failed deposit
         
 
                 }
 
 
-                //Person 2 will add validation and history logging
+                //Shirley will add validation and history logging
+                      //Withdraw function
                 bool withdraw(double amount){
+                    //subtract from balance if valid "if else"
                     if (amount > 0 && amount <= balance){
                         balance -= amount;
 
@@ -40,21 +50,21 @@ using namespace std;
                             cout<< "Balance is now zero." << endl;
                         }
 
-                // Person 2: Add push_back to history for successful withdrawal
+                // Shirley: Add push_back to history for successful withdrawal
                         return true;
                 }
 
 
-                //CONSOLDE OUTPUT FOR TESTING (PERSON 1)
+                
                 cout<<"Insufficient funds."<<endl;
                 
-        // Person 2: Add push_back to history for failed withdrawal
+        //Shirley: Add push_back to history for failed withdrawal
                     return false;
                 }
 
-
+              //Getbalance function
                 double getBalance() const {
-        // Console output for testing (Person 1)
+        
         cout << "Current Balance: $" << balance << endl;
 
         return balance;
@@ -70,3 +80,18 @@ using namespace std;
                 
     };
 
+
+
+//Lucia Zuniga
+//11-1-25
+//Reflection-
+//Challenges: I think that one challenge our team faced during this project was being able to coordinate our schedules. With different boundaries and schedules  
+//it was difficult to find a moment to get on a call together to get the project over with. Because of that I felt like we had to be more active when it came 
+//to written communication through Instagram and comments within the code. As well as making sure that each part of the project was fairly distributed. 
+//
+//Solution: In order to help prevent miscommunication, I added comments directly to the code I input to help guide Shirley since we were working in the same file. 
+//Eventhough we couldn't connect live, this helped us stay on the same page. Another step taken was updating my teamates through text explpaining what tasks I completed for the day.
+//
+//What I Learned: Something that I relearned was thoroughly understanding the process of how constructors work, especially the importance of a parameterized constructor. At first 
+//I forgot to include it but once it was revised I made sure I fully completed it so it wouldn't confuse my teamate. I also got to remember the usage of pass by
+//reference by using "&" making sure that the data was passed. 
