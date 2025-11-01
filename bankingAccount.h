@@ -90,7 +90,7 @@ using namespace std;
 
                 // Person 2: Fully define this function to print owner name, account number, and balance
                 void display() const{
-                    cout << "=== Banking System ===\n";
+                    cout << "\n=== Account Info ===\n";
                     cout << "Owners Name: " << ownerName << endl; 
                     cout << "Account Number: " << accountNumber <<endl;
                     cout << "Balance: $"<< balance <<endl;
