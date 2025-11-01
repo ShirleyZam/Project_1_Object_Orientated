@@ -21,6 +21,7 @@ int main() {
 
     // Here input validation for account number
     while (true) {
+        
         cout << "Enter account number: ";
         cin >> accountNumber;
         if (cin.fail() || accountNumber <= 0) {
@@ -28,7 +29,9 @@ int main() {
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << "Invalid input. Please enter a positive number.\n";
         }
+        
         else break;
+    
     }
 
     // Here I input validation for initial deposit
@@ -47,6 +50,7 @@ int main() {
     bankAccount account(accountHolder, accountNumber, initialDeposit);
 
     int choice;
+    
     do {
         cout << "\nMenu:\n";
         cout << "1) Deposit\n";
@@ -86,6 +90,7 @@ int main() {
             cin >> amount;
             if (!cin.fail() && amount > 0)
                 account.withdraw(amount);
+            
             else {
                 cout << "Invalid amount.\n";
                 cin.clear();
@@ -112,3 +117,9 @@ int main() {
 
     return 0;
 }
+
+//Reflection:
+//For my part of the project, I created the main menu system that connects and it will connect the class method together. 
+// I was struggeling while I was doing input validation by using cin.fail(), clear(), and ignore(). Also, I was trying so many times with the compile because it wasn't runnung. Then I realized I did some typo mistakes. 
+// I was also getting stuck when I was trying to run both file at a time because it was showing error and couldn't fix the issue. Later on we fixed it by working together. 
+// However, I learned how to design a menu loop that put together smoothly with a class while keeping the program easy for users.
