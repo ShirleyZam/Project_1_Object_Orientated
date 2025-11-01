@@ -18,7 +18,7 @@ using namespace std;
             public:
 //Lucia: Defined public data so Bankingsystems file can have access to following data
             bankAccount() {}
-//Lucia: Default constructor
+//Lucia: Added Default constructor
 
                  bankAccount(const string& OwnerName, int AccountNumber, double Balance){
                     //Shirley : Encapsulation using the parametized constructor to access the private Data Members
@@ -53,7 +53,7 @@ using namespace std;
                 
                        //Lucia: Wrote withdraw function with "if else" logic to confirm that amount is valid
                 bool withdraw(double amount){
-                    //Lucia: Added subtraction from balance if valid "if else"
+                    //Lucia: Added subtraction from balance
                     if (amount > 0 && amount <= balance){
                         balance -= amount;
                         cout<< "Withdrew $" << amount << endl;
