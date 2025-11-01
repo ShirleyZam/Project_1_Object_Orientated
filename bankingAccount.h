@@ -9,16 +9,16 @@ using namespace std;
 
     class BankAccount{
         private:
-//We have the private member variables for the data of account
+//Lucia: Defined private member variables for the data of account
             string ownerName{"First Last"}; 
             int accountNumber{};
             double balance{0.0};
             vector<string> history; //Shirley will manage this with vector
 
             public:
-//Public data so Bankingsystems file can have access to following data
+//Lucia: Defined public data so Bankingsystems file can have access to following data
             BankAccount() {}
-//Default constructor
+//Lucia: Default constructor
 
                  BankAccount(const string& OwnerName, int AccountNumber, double Balance){
                     //Shirley : Encapsulation using the parametized constructor to access the private Data Members
@@ -29,13 +29,13 @@ using namespace std;
                     history.push_back("Account created for: " + ownerName + "Balance: $" + to_string(balance));
 
                 }
-//Parameterized constructor
+//Lucia: Created Parameterized constructor
 
-                //Functions: 
-                    //Deposit function
+               // Functions: 
+                    //Lucia: Wrote Deposit function
                     
                 void deposit(double amount){
-                    //Add balance when a number is provided
+                    //Lucia: Added balance when a number is provided (Line 41)
                     //Shirley: Constructed if statement for when the amount it less than 0 
                     if(amount > 0){
                         balance += amount;
@@ -51,9 +51,9 @@ using namespace std;
 
 
                 
-                      //Withdraw function
+                       //Lucia: Wrote withdraw function with "if else" logic to confirm that amount is valid
                 bool withdraw(double amount){
-                    //subtract from balance if valid "if else"
+                    //Lucia: Added subtraction from balance if valid "if else"
                     if (amount > 0 && amount <= balance){
                         balance -= amount;
                         cout<< "Withdrew $" << amount << endl;
@@ -65,17 +65,18 @@ using namespace std;
 
                         return true;
                 }
-                
+                // Lucia: Added this output in case of a failed withdrawal
                 cout<<"Insufficient funds."<<endl;
-                
+                //Lucia: Add return false when there is a failed withdrawal
                     return false;
                 }
 
-              //Getbalance function
+              //Lucia: Wrote Getbalance function
                 double getBalance() const {
         
                 cout << "Current Balance: $" << balance << endl;
 
+                    //Lucia: Returned balance ensuring a balance is returned
                  return balance;
                 
                 }
@@ -120,7 +121,7 @@ using namespace std;
 //
 //What I Learned: Something that I relearned was thoroughly understanding the process of how constructors work, especially the importance of a parameterized constructor. At first 
 //I forgot to include it but once it was revised I made sure I fully completed it so it wouldn't confuse my teamate. I also got to remember the usage of pass by
-//reference by using "&" making sure that the data was passed. 
+//reference by using "&" making sure that the data was passed. I was also able to apply and practice using "if" statements for functions such as withdraw and deposit. 
 
 //Shirley Zamora
 //11/1/25
