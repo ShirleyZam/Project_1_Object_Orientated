@@ -7,7 +7,7 @@
 
 using namespace std;
 
-    class BankAccount{
+    class bankAccount{
         private:
 //Lucia: Defined private member variables for the data of account
             string ownerName{"First Last"}; 
