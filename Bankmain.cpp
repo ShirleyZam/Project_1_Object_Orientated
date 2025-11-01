@@ -44,7 +44,7 @@ int main() {
     }
 
     // Create account using class from BankAccount.h
-    BankAccount account(owner, accountNumber, initialDeposit);
+    bankAccount account(owner, accountNumber, initialDeposit);
 
     int choice;
     do {
