@@ -1,10 +1,10 @@
-//Author: Rejuana Afrin
-//Date: 11/01/2025
+// Author: Rejuana Afrin
+// Date: 11/01/2025
 
 #include <iostream>
 #include <limits>
+#include <string>
 #include "bankAccount.h"  
-
 
 using namespace std;
 
@@ -12,14 +12,14 @@ using namespace std;
 int main() {
     cout << "=== Banking System ===" << endl;
 
-    string accoutHolder;
+    string accountHolder;
     int accountNumber;
     double initialDeposit;
 
-    cout << "Enter accoutHolder name: ";
-    getline(cin, accoutHolder);
+    cout << "Enter account holder name: ";
+    getline(cin, accountHolder);
 
-    // Input validation for account number
+    // Here input validation for account number
     while (true) {
         cout << "Enter account number: ";
         cin >> accountNumber;
@@ -31,7 +31,7 @@ int main() {
         else break;
     }
 
-    // Input validation for initial deposit
+    // Here I input validation for initial deposit
     while (true) {
         cout << "Enter initial deposit (>0): ";
         cin >> initialDeposit;
@@ -43,8 +43,8 @@ int main() {
         else break;
     }
 
-    // Create account using class from BankAccount.h
-    bankAccount account(owner, accountNumber, initialDeposit);
+    // Here is the bankAccount object
+    bankAccount account(accountHolder, accountNumber, initialDeposit);
 
     int choice;
     do {
@@ -59,11 +59,10 @@ int main() {
 
         cin >> choice;
 
-        // Stream validation
         if (cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cout << "Invalid input. Please enter a number between 1–6.\n";
+            cout << "Error... Please enter a number between 1–6.\n";
             continue;
         }
 
