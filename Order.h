@@ -20,8 +20,9 @@ class Order{
 		Order(const string& name, int s, double tp);
 		
 		string getflavorname() const;
-		int getscoops();
-		double gettotalprice();
+		int getscoops() const;
+		double gettotalprice() const;
 		
 		void print() const;
+
 };
