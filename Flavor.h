@@ -1,8 +1,10 @@
+#ifndef FLAVOR_H
+#define FLAVOR_H
+
 #include <iostream>
 #include <string>
 using namespace std;
 
-//General Flavor Properties:
 class Flavor {
 private:
     string name;
@@ -22,65 +24,18 @@ public:
         bucketSize = bucket;
     }
 
+    // same names, now const
     string getName() const { return name; }
     double getPrice() const { return scoopPrice; }
     int getBucketSize() const { return bucketSize; }
 
-    // Basic price calculation
-    double priceCalc(int scoops) {
+    // ***make this virtual + const, same name as before***
+    virtual double priceCalc(int scoops) const {
         return scoops * scoopPrice;
     }
 
-    string getType() {
+    // ***virtual + const, same name***
+    virtual string getType() const {
         return "Flavor";
     }
 };
-
-
-// Regular Flavors Child Class
-
-class RegularFlavor : public Flavor {
-public:
-    RegularFlavor(string n, double price, int bucket) : Flavor(n, price, bucket) {}
-
-    string getType() {
-        return "Regular";
-    }
-};
-
-
-// Seasonal Flavor Class
-
-class SeasonalFlavor : public Flavor {
-private:
-    double discount; // example: 0.20 = 20% off
-
-public:
-    SeasonalFlavor(string n, double price, int bucket, double d)
-        : Flavor(n, price, bucket) {
-        discount = d;
-    }
-
-    double computePrice(int scoops) {
-        double base = scoops * getPrice();
-        return base - (base * discount);
-    }
-
-    string getType() {
-        return "Seasonal";
-    }
-};
-
-// ==========================
-// Operator<< OUTSIDE classes
-// NO FRIEND — uses getters
-// ==========================
-ostream& operator<<(ostream& os, const Flavor& f) {
-    os << f.getName()
-       << " ($" << f.getPrice() << " per scoop)"
-       << " | Bucket size: " << f.getBucketSize()
-       << " | Type: " << f.getType();
-    return os;
-}
-
-#endif
