@@ -8,11 +8,12 @@
 
 class StockReport : public Report{
 	private:
-		vector<order> Orders;
+		vector<order> orders;
 		
 	public:
-		StockReport(const vector<order>& Orders);
+		StockReport(const vector<order>& aorders);
 		void createReport() const;
 	
 };
+
 #endif
