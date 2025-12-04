@@ -1,3 +1,5 @@
+#ifndef ORDER_H
+#define ORDER_H
 #include <iostream>
 #include <string>
 
@@ -26,3 +28,4 @@ class Order{
 		void print() const;
 
 };
+#endif
