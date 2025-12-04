@@ -1,24 +1,24 @@
 #include "Filemanager.h"
 
- #include <fstream>
+ #include <fstream> // it will allow to read and write
 
- #include <sstream>
+ #include <sstream> // it will allow to split easily
 
- #include "Flavor.h"
+ #include "Flavor.h" // it will include flavor and it's subclasses
  
 using namespace std;
  
-void FileManager::saveInventory(const Inventory& inventory, const string& filename) {
+void FileManager::saveInventory(const Inventory& inventory, const string& filename) { // it will save the inventory to a file
 
-     ofstream outFile(filename);
+     ofstream outFile(filename); // opened file for writing 
 
-     if (!outFile.is_open()) {
+     if (!outFile.is_open()) { // it will check if the file failed to open
 
-         throw runtime_error("Cannot open inventory file for writing.");
+         throw runtime_error("Cannot open inventory file for writing."); // it will show the error message
 
      }
  
-    const vector<Flavor*>& flavorList = inventory.getFlavors();
+    const vector<Flavor*>& flavorList = inventory.getFlavors(); // to get all flavors
  
     for (size_t i = 0; i < flavorList.size(); i++) {
 
