@@ -27,3 +27,4 @@ class OutOfStockException : public std::runtime_error {
  };
  
 #endif // EXCEPTIONS_H
+
