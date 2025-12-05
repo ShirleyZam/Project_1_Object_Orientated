@@ -1,10 +1,11 @@
+//Darien Hector
 #ifndef STOCKREPORT_H
 #define STOCKREPORT_H
 #include "Report.h"
 #include "Order.h"
 #include "Stats.h"
 #include <vector>
-//Darien Hector
+
 using namespace std;
 
 class StockReport : public Report{
@@ -17,4 +18,5 @@ class StockReport : public Report{
 		
 		void createReport() const override;
 };
+
 #endif 
