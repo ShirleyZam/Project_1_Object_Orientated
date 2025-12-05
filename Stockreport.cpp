@@ -1,6 +1,7 @@
+//Darien Hector
 #include "Stockreport.h"
 #include <iostream>
-//Darien Hector
+
 using namespace std;
 
 StockReport::StockReport(const vector<Order>& aorders) 
@@ -34,4 +35,5 @@ void StockReport::createReport() const{
 		cout <<flavors[i]<<" " <<count[i] <<"scoops sold" <<endl;
 	}
 	
+
 }
