@@ -1,3 +1,6 @@
+// Rejuana Afrin
+// 11/05/2025
+
 #ifndef FILEMANAGER_H // this file is uncluded but only once
 #define FILEMANAGER_H    //define the header guard
 
