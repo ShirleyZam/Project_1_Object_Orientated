@@ -1,3 +1,4 @@
+//Alex Guzman
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
@@ -40,3 +41,4 @@ friend ostream& operator<<(ostream& os, const Inventory&);
 };
 
 #endif 
+
