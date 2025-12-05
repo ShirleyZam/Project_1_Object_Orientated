@@ -1,3 +1,4 @@
+//Alex Guzman
 #ifndef EXCEPTIONS_H
 #define EXCEPTIONS_H
 
@@ -17,3 +18,4 @@ class OutOfStockException : public runtime_error {
 };
 
 #endif // EXCEPTIONS_H
+
