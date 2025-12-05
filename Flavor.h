@@ -82,7 +82,7 @@ public:
 //Child Class - (Inherits) with own special rules
 //calculates price with discount different to parent(base class) 
 //Should still be treated like Flavor
-seasonalFlavor(string n, double price, int bucket, double d) //Parameters (What is needed)
+SeasonalFlavor(string n, double price, int bucket, double d) //Parameters (What is needed)
 : Flavor(n, price, 10), discount(d) {} //calls base (parent) constructor
 //Initializer list                     //intialize new member for this class 
 
@@ -102,10 +102,10 @@ string getType() const override{
 //allows define function 
 inline ostream& operator<<(ostream& os, const Flavor& f){ //return a reference and output flavor object and prevent modification of object 
   os<< f.getName()<<" ($" << f.getPrice() << " per scoop)" << " | Bucket size: " << f.getBucketSize()
-    << " | Type: " << f.getType() <<endl;
+    << " | Type: " << f.getType();
 //we print flavors information (name, price, bucketsize)
   return os;
-//return the overriden version (seasonal or regular)
+//return the output stream allow chaining
   
 }
 
