@@ -1,3 +1,4 @@
+//Lucia Zuniga
 #ifndef FLAVOR_H
 #define FLAVOR_H
 //This header file defines 
