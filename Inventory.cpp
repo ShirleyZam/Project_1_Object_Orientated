@@ -1,3 +1,4 @@
+//Alex Guzman
 #include "Inventory.h"
 #include <cctype>
 #include "Exceptions.h"
@@ -146,3 +147,4 @@ Inventory::~Inventory(){
     }
     return os;
  }
+
