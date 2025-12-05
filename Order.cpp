@@ -1,7 +1,8 @@
+//Darien Hector
 #include "Order.h"
 
 #include <iostream>
-//Darien Hector
+
 using namespace std;
 //default constructor withbase values
 Order::Order() : flavorname(" "), scoops(0), totalprice(0.0){}
@@ -15,4 +16,5 @@ double Order::gettotalprice() const{return totalprice;}
 //prints the users order using the function from report.h
 void Order::print() const{
 	cout<<"Flavor: " <<flavorname <<"\nAmount of scoops: " <<scoops <<"\ntotal price: "<<totalprice<<"\n";
+
 }
