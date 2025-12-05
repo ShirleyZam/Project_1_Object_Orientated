@@ -1,9 +1,11 @@
+
+//Darien Hector
 #ifndef ORDER_H
 #define ORDER_H
 
 #include <string>
 #include <iostream>
-//Darien Hector
+
 using namespace std;
 
 class Order{
@@ -22,4 +24,5 @@ class Order{
 		double gettotalprice() const;
 		void print() const;
 };
+
 #endif
