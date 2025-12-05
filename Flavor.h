@@ -26,7 +26,7 @@ Flavor(){
 //a specific name, a certain price scoop, a default bucket size of 10
 Flavor (string n, double price,  int bucket = 10){
 name = n; //Specific name
-scoopPrice = Price; //certain price scoop 
+scoopPrice = price; //certain price scoop 
 bucketSize = 10; //default 10
 }
 
@@ -98,11 +98,15 @@ string getType() const override{
 }
 };
 
-inline ostream& operator<<(ostream& os, const Flavor& f){
-  os<< f.getName()<<" ($" << f.getPrice() << " per scoop)" << " | Bucket size: " << f.getBucketSize()
-    << " | Type: " << f.getType();
 
+//allows define function 
+inline ostream& operator<<(ostream& os, const Flavor& f){ //return a reference and output flavor object and prevent modification of object 
+  os<< f.getName()<<" ($" << f.getPrice() << " per scoop)" << " | Bucket size: " << f.getBucketSize()
+    << " | Type: " << f.getType() <<endl;
+//we print flavors information (name, price, bucketsize)
   return os;
+//return the overriden version (seasonal or regular)
+  
 }
 
 #endif //FLAVOR_H
