@@ -1,8 +1,9 @@
+//Darien Hector
 #ifndef STATS_H
 #define STATS_H
 
 #include <vector>
-//Darien Hector
+
 using namespace std;
 
 template <typename T>
@@ -59,4 +60,5 @@ class Stats{
 	}	
 	
 };
+
 #endif
